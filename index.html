@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir Pendaftaran Interaktif</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="form-container">
+        <h2>Pendaftaran Mahasiswa</h2>
+        <p class="subtitle">Silakan isi data diri Anda di bawah ini.</p>
+
+        <form id="formPendaftaran" action="proses.php" method="POST">
+            <div class="form-group">
+                <label for="nama">Nama Lengkap</label>
+                <input type="text" id="nama" name="nama" placeholder="Masukkan nama lengkap Anda" required>
+            </div>
+
+            <div class="form-group">
+                <label for="nim">NIM (Nomor Induk Mahasiswa)</label>
+                <input type="text" id="nim" name="nim" placeholder="Contoh: 123456789" required maxlength="9">
+                <small id="nimError" class="error-text"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Alamat Email</label>
+                <input type="email" id="email" name="email" placeholder="contoh@gmail.com" required>
+                <small id="emailError" class="error-text"></small>
+            </div>
+
+            <button type="submit" id="btnKirim">Kirim Data</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
